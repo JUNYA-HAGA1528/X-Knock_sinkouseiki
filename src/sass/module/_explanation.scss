@@ -1,0 +1,129 @@
+@use "global" as *;
+
+.explanation{        
+    background-image: url('../images/common/explanation-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(60) 0 rem(80);
+    @include mq(md) {
+        background-image: url('../images/common/explanation-bg.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: rem(80) 0 rem(100);
+    }
+}
+
+.explanation__head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 rem(10);
+    @include mq(md) {
+        gap: 0 rem(35);
+    }
+}
+
+.explanation__title{
+    color: #0B2937 ;
+    font-size: rem(28);
+    font-weight: $semiBold;
+    white-space: nowrap;
+    @include mq(md) {
+        font-size: rem(48);
+    }
+}
+
+.explanation__borderLeft{
+    background: #0178AF;
+    width: 14.09%;
+    height: rem(56);
+    @include mq(md) {   
+        width: 31%; /* 必要に応じて調整 */
+        height: rem(100); /* ボーダーの高さ */
+    }
+}
+
+.explanation__borderReft{
+    background: #0178AF;
+    width: 14.09%;
+    height: rem(56);
+    @include mq(md) {  
+        width: 31%; /* 必要に応じて調整 */
+        height: rem(100); /* ボーダーの高さ */
+    }
+}
+
+.explanation__inner{
+    max-width: $max-width;
+    margin-inline: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(1200);
+        padding: 0 rem(25);
+    }
+}
+
+.explanation__content{
+    margin-top: rem(47);
+    @include mq(md) {
+        margin-top: rem(77);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 rem(102);
+    }
+}
+
+.explanation__img{
+    width: 100%;
+    @include mq(md) {
+        width: 43.48%;
+    }
+}
+
+.explanation__sentence{
+    width: 100%;
+    @include mq(md) {
+        width: 47.66%;
+        margin-top: rem(-10);
+    }
+}
+
+.explanation__text{
+    color: #052E42;
+    max-width: rem(500);
+    font-size: rem(16);
+    font-weight: $semiBold;
+    line-height: calc(28/16);
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        font-size: rem(20);
+        line-height: calc(36/20);
+    }
+}
+
+.explanation__buttons{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(62.95);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 rem(12.55);
+    }
+}
+
+.explanation__button{
+    width: rem(268);
+    height: rem(56);
+    margin-inline: auto;
+}
+
+.explanation__button + .explanation__button{
+    margin-top: rem(10.89);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}

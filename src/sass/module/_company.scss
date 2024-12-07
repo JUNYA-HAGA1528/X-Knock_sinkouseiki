@@ -23,6 +23,7 @@
     color: #0B2937 ;
     font-size: rem(28);
     font-weight: $semiBold;
+    white-space: nowrap;
     @include mq(md) {
         font-size: rem(48);
     }
