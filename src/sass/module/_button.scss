@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.button__form  {
+    font-family: $second-font;
+    background: linear-gradient(90deg, #062D3F 0%, #0080BC 100%);
+    color: $white;
+    font-size: rem(15.06);
+    font-weight: $bold;
+    letter-spacing: 0.1em; 
+    width: rem(267.73);  
+    padding: rem(17) 0;
+    z-index: 1;
+}

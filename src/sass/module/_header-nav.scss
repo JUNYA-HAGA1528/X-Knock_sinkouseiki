@@ -1,0 +1,127 @@
+@use "global" as *;
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-nav__list{
+    display: flex;
+    justify-content: flex-end;
+    gap: rem(40);
+    background-color: $black;
+    padding: rem(12) rem(130);
+    border-radius: 0 0 0 rem(20);
+}
+
+
+.header-nav__textBox{
+    text-align: center;
+}
+
+.header-nav__text-jp{
+    color: $white;
+    font-size: rem(20);
+    font-weight: $bold;
+}
+
+.header-nav__text-en{
+    color: #F5EC10;
+    font-size: rem(16);
+    font-weight: $medium;
+}
+
+.header-nav__link{
+    display: flex;
+    gap: rem(10);
+}
+
+.header-nav__icon{
+    margin-top: rem(5);
+    width: rem(21);
+    height: rem(21);
+}
+
+.header-nav__link:hover .header-nav__icon {
+    transform: translateX(5px); /* 画像を右に10px移動 */
+    transition: transform 0.3s ease; /* スムーズな移動 */
+}
+
+
+
+
+
+.headerNav {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); /* 少し上から滑らかに現れる */
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+.headerNav.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* 元の位置に戻る */
+}
+
+
+
+.headerNav.scrolled {
+    height: 50px; /* スクロール時のヘッダー高さ */
+    transition: height 0.3s ease; /* スムーズな高さ変更 */
+    @include mq(md) {
+        height: 84px; /* スクロール時のヘッダー高さ */
+    }
+}
+
+.headerNav__inner{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: rem(25);
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease; /* 背景色が滑らかに変わる */
+}
+
+
+
+
+.pc-nav__item:not(.pc-nav__item--padding) a {
+    position: relative;
+    text-decoration: none;
+}
+
+.pc-nav__item:not(.pc-nav__item--padding) a::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 0;
+    height: 2px; /* 下線の高さ */
+    background-color: #5EAAD7; /* 下線の色 */
+    transition: width 0.3s ease; /* アニメーションの速さ */
+}
+
+.pc-nav__item:not(.pc-nav__item--padding) a:hover::after {
+    width: 100%; /* 下線が左から右へ伸びる */
+}
+
+/* 下線を表示しない */
+.pc-nav__item--padding a::after {
+    content: "";
+    width: 0;
+    background: none;
+}

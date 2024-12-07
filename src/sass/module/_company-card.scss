@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.company-cards__list{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.company-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    min-height: rem(192);
+    padding: rem(8) rem(0) rem(8) rem(17);
+    background-color: $white;
+    color: #000;
+    position: relative;
+}
+
+.company-cards__button{
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.company-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.company-card__list{
+    text-align: left;
+    display: flex;
+}
+
+.company-card__list + .company-card__list{
+    margin-top: rem(12);
+}
+
+.company-card__list dt {
+    width: 20%;
+    display: flex;
+    font-size: rem(18);
+    font-weight: $regular;
+    letter-spacing: 0.01em;
+}
+
+.company-card__list dd {
+    width: 80%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    font-size: rem(15);
+    font-weight: $regular;
+    letter-spacing: 0.01em;
+    margin-top: rem(3);
+}
+
+.company-card__list dd.company-card__list-margin {
+    font-size: rem(12.5); /* 12px */
+}
+
+
+.company-card__list a {
+    transition: 0.3s;
+    display: inline;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.company-card__list a:hover {
+    opacity: 0.3;
+}
+
+.company-card__list-margin a{
+    text-decoration: underline;
+}
+
+.company-card__list-margin a:hover {
+    text-decoration: underline; /* リンクにホバーしたときの下線 */
+    opacity: 1;
+    transition: 0.5s;
+}

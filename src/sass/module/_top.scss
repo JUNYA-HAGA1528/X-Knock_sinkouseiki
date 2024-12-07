@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.top{
+    background-color: #093B68;
+    color: $white;
+    height: rem(30);
+}
+
+.top-text{
+    height: inherit;
+    padding-left: rem(20);
+    font-size: rem(16);
+    font-weight: $normal;
+    display: flex;
+    align-items: center;
+    @include mq(md) {
+        padding-left: rem(100);
+    }
+}

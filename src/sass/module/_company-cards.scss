@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.company-cards{
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.company-cards__list{
+    position: relative;
+    @include mq(md){
+        max-width: calc(33.3333% - 3.125rem * 2 / 3);
+        width: 100%;
+    }
+}
+
+.company-cards__list + .company-cards__list{
+    margin-top: rem(70);
+    @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(50);
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.company-cards__list:nth-child(3n + 1){
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.company-cards__list:nth-child(n + 4){
+    @include mq(md) {
+        margin-top: 4.375rem;
+    }
+}
