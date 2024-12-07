@@ -1,17 +1,5 @@
 @use "global" as *;
 
-
-
-
-
-
-
-
-
-
-
-
-
 .header-nav__list{
     display: flex;
     justify-content: flex-end;
@@ -79,7 +67,7 @@
 
 
 .headerNav.scrolled {
-    height: 50px; /* スクロール時のヘッダー高さ */
+    height: 63px; /* スクロール時のヘッダー高さ */
     transition: height 0.3s ease; /* スムーズな高さ変更 */
     @include mq(md) {
         height: 84px; /* スクロール時のヘッダー高さ */
@@ -92,7 +80,7 @@
     justify-content: space-between;
     align-items: center;
     padding-left: rem(25);
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #52B9C0;
     transition: background-color 0.3s ease; /* 背景色が滑らかに変わる */
 }
 

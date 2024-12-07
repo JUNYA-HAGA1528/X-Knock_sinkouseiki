@@ -12,3 +12,24 @@
     padding: rem(17) 0;
     z-index: 1;
 }
+
+.button__form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit; /* 親要素と同じ角丸 */
+    padding: 2px; /* ボーダーの幅 */
+    background: linear-gradient(90deg, #0080BC 0%, #1C5873 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1; /* 背景に配置 */
+}

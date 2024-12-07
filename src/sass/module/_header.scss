@@ -1,32 +1,39 @@
 @use "global" as *;
 
 .header{
-    background-color: #F2F5F8;
-    height: rem(52);
+    background-color: #52B9C0;
+    height: rem(63);
     @include mq(md){
-        height: rem(84);
+        height: rem(90);
     }
 }
 
-.header__inner{
-    height: inherit;
+.header__inner {
+    height: inherit; /* 必要なら具体的に高さを指定 */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: rem(13);
+    padding-left: rem(25);
     @include mq(md){
-        padding-left: rem(80);
+        padding: 0 rem(46) 0 rem(80);
     }
 }
 
 .header__logo {
-    width:rem(154) ;
-    height: rem(39.97);
-    position: relative;/* z-indexをきかせるため */
+    width: rem(174);
+    height: rem(44);
+    position: relative; /* z-indexをきかせるため */
     z-index: 9999;
-    @include mq(md){
-        width: rem(270);
-        height: rem(70);
+    display: flex;
+    align-items: center; /* 縦方向中央 */
+    justify-content: center; /* 横方向中央 */
+    @include mq(md) {
+        width: rem(238);
+        height: rem(60);
     }
 }
 
+.header__logo img {
+    display: block; /* 画像の余白を削除 */
+    margin: 0 auto; /* 必要なら中央揃え */
+}
