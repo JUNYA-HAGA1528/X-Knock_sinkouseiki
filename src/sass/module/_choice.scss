@@ -1,0 +1,139 @@
+
+@use "global" as *;
+
+
+.choice{
+    background-color: #F5FEFF;
+    padding: rem(68) 0 rem(80);
+    @include mq(md) {
+        padding: rem(102) 0 rem(112);
+    }
+}
+
+.choice__title{
+    width: rem(340);
+    height: rem(105);
+    margin-inline: auto;
+    @include mq(md) {
+        width: rem(820);
+        height: rem(126);
+    }
+}
+
+.choice__inner{
+    max-width: $max-width;
+    margin-inline: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(1182);
+    }
+}
+
+.choice__text{
+    margin-top: rem(40);
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(28/16);
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        margin-top: rem(86);
+        font-size: rem(20);
+        font-weight: $semiBold;
+        line-height: calc(36/20);
+    }
+}
+
+.choice__text span { 
+    color: #0178AF;
+    font-weight: $medium;
+}
+
+.choice__list {
+    margin-top: rem(114);
+    @include mq(md) {
+        margin-top: rem(80);
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.choice__item {
+    background-color: $white;
+    position: relative;
+    @include mq(md) {
+        max-width: calc(33.3333% - 2rem * 2 / 3);
+        width: 100%;
+    }
+}
+
+.choice__item + .choice__item {
+    margin-top: rem(72.63);
+    @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(32);
+    }
+}
+
+.choice__item:nth-child(3n + 1) {
+    @include mq(md) {
+        margin-left: 0;
+    }
+}
+
+.choice__item:nth-child(n + 4) {
+    @include mq(md) {
+        margin-top: 2.5rem;
+    }
+}
+
+.choice__number{
+    position: absolute;
+    top: -17%;
+    left: 50%;
+    transform: translate(-50%);
+    width: rem(68.81);
+    height: rem(68.81);
+    @include mq(md) {
+        top: -17%;
+        width: rem(72);
+        height: rem(72);
+    }
+}
+
+.choice__name{
+    text-align: center;
+    padding: rem(19) 0 ;
+    background: linear-gradient(90deg, #062D3F 0%, #0080BC 100%);
+    color: $white;
+    font-size: rem(26.76);
+    font-weight: $semiBold;
+    @include mq(md) {
+        font-size: rem(28);
+        padding: rem(20) 0 ;
+    }
+}
+
+.choice__sentence{
+    padding: rem(20) rem(25) 0;
+    min-height: rem(233);
+    @include mq(md) {
+        min-height: rem(244);
+    }
+}
+
+.choice__explanation{
+    font-size: rem(18);
+    font-weight: $regular;
+    line-height: calc(25/18);
+    letter-spacing: 0.01em;
+}
+
+.choice__explanation + .choice__explanation{
+    margin-top: rem(20);
+}
+
+.choice__explanation span {
+    color: #4BCCBE;
+    font-size: rem(20);
+    font-weight: $semiBold;
+}

@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.article{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    @include mq(md) {
+        max-width: rem(1440);
+        margin: auto;
+    }
+}
+
+.article__container{
+    width: 100%;
+    padding-bottom: rem(80);
+    @include mq(md){
+        width: 90.25%;
+    }
+}
+
+.article__market{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+.article__essential{
+    margin-top: rem(8.49);
+    @include mq(md) {
+        margin-top: rem(100);
+    }
+}
+
+.article__aside{
+    width: 24.76%;
+    background-color: #EAF4FC;
+    // F9F9F9
+}
+
+
+
+
+.article__method{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+.article__guide{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}

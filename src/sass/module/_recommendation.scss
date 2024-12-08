@@ -2,9 +2,17 @@
 
 .recommendation{
     background-color: #032333;
+    background-image: url('../images/common/recommendation-bg-sp.webp');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% rem(758);
     text-align: center;
     padding: rem(316) 0 rem(40);
     @include mq(md) {
+        background-image: url('../images/common/recommendation-bg.webp');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 100% rem(1042);
         padding: rem(147) 0 rem(80);
     }
 }

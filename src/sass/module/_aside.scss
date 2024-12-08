@@ -1,0 +1,15 @@
+@use "global" as *;
+
+
+.aside__img {
+    cursor: pointer;
+}
+
+.aside__img img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+}
+  
+.aside__img:hover img {
+    transform: scale(0.97); /* 拡大 */
+}
