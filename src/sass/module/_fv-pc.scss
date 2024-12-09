@@ -1,0 +1,114 @@
+@use "global" as *;
+
+
+.fv-pc__bg{
+    background-color: $black;
+    color: $white;
+    background-image: url('../images/common/fv-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(100) 0 rem(45);
+}
+
+.fv-pc__inner{
+    max-width: 1300px;
+    margin-inline: auto;
+    padding: 0 rem(10);
+}
+
+.fv-pc__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+.fv-pc__tag{
+    display: inline-block;
+    font-size: rem(32);
+    font-weight: $regular;
+    border: solid 1px $white;
+    padding: rem(6) rem(14) rem(4) rem(15);
+}
+
+.fv-pc__title{
+    margin-top: rem(12);
+    font-size: rem(72);
+    font-weight: $semiBold;
+    line-height: 1.5;
+}
+
+.fv-pc__subtitle{
+    font-size: rem(37.2);
+    font-weight: $regular;
+    line-height: 1.5;
+}
+
+.fv-pc__text{
+    max-width: rem(631);
+    margin-top: rem(20);
+    font-size: rem(18);
+    font-weight: $regular;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+.fv-pc__img-third{
+    width: rem(386);
+    height: rem(328);
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+}
+
+.fv-pc__source{
+    color: $white;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: rem(17);
+    font-size: rem(10);
+    font-weight: $regular;
+    line-height: calc(32/10);
+    letter-spacing: 0.01em;
+    padding-right: rem(113);
+}
+
+.fv-pc__img {
+    margin-top: -22.25%;
+    margin-left: auto; /* 左側の余白を自動調整 */
+    margin-right: 0; /* 右側の余白をゼロに設定 */
+    display: flex; /* 子要素の位置調整を容易にするためにflexboxを使用 */
+    justify-content: flex-end; /* 子要素を右寄せ */
+    position: relative;
+    // @media (max-width: 1200px) {
+    //     margin-top: -100px;
+    // }
+}
+
+
+.fv-pc__img-second{
+    position: absolute;
+    top: -9%;
+    right: 8%;
+    width: rem(425);
+    height: rem(245);
+    z-index: 2;
+}
+
+.fv-pc__img-position{
+    position: relative;
+}
+
+.fv-pc__img-first{
+    position: absolute;
+    top: -46%;
+    right: 17%;
+    width: rem(442);
+    height: rem(291);
+    z-index: 1;
+    @media (max-width: 768px) {
+
+    }
+    
+}

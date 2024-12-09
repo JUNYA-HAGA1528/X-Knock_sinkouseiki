@@ -1,0 +1,102 @@
+@use "global" as *;
+
+
+.fv-sp{
+    background-color: $black;
+    color: $white;
+    background-image: url('../images/common/fv-bg-sp.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(30) 0 rem(64);
+}
+
+.fv-sp__inner{
+    max-width: rem(390);
+    margin-inline: auto;
+    padding: 0 rem(25);
+}
+
+.fv-sp__tag{
+    font-size: rem(21.97);
+    font-weight: $regular;
+    line-height: 1.5;
+    display: inline-block;
+    border: solid 1px $white;
+    padding: rem(3.5) rem(9.5);
+}
+
+.fv-sp__title{
+    margin-top: rem(14.8);
+    font-size: rem(40);
+    font-weight: $semiBold;
+    line-height: 1.5;
+}
+
+.fv-sp__subtitle{
+    font-size: rem(24.34);
+    font-weight: $regular;
+    line-height: 1.5;
+}
+
+.fv-sp__img-first{
+    margin-top: rem(10);
+    display: inline-block;
+    width: rem(183);
+    height: rem(158);
+}
+
+
+
+
+.fv-sp__content{
+    position: relative;
+}
+
+.fv-sp__img-second{
+    position: absolute;
+    top: 71%;
+    left: 14%;
+
+}
+
+.fv-sp__img-second img {
+    width: rem(200);
+    height: rem(131);
+    display: inline-block;
+}
+
+.fv-sp__source{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    margin-top: rem(100);
+    font-size: rem(10);
+    font-weight: $regular;
+    line-height: calc(32/10);
+    letter-spacing: 0.01em;
+    position: relative;
+}
+
+.fv-sp__img-third{
+    position: absolute;
+    top: -507%;
+    left: 38%;
+    z-index: 3;
+}
+
+.fv-sp__img-third img {
+    width: rem(186);
+    height: rem(158);
+}
+
+.fv-sp__sentence{
+    background-color: $black;
+    padding: rem(20) rem(10);
+}
+
+.fv-sp__text{
+    font-size: rem(15);
+    font-weight: $regular;
+    line-height: calc(1.5);
+}
