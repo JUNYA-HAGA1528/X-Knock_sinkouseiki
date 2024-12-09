@@ -115,4 +115,15 @@
 
 .media__item{
     background-color: $white;
+    padding-bottom: rem(80);
+    @include mq(md) {
+        padding-bottom: rem(64);
+    }
+}
+
+.media__item + .media__item{
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(116);
+    }
 }

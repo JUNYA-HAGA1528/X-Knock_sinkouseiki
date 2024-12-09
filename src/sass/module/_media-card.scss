@@ -3,7 +3,7 @@
 .media-card{
     position: relative;
     background-image: url('../images/common/media-card-bg-sp.webp');
-    background-position: center calc(50% + -83px);
+    background-position: center calc(50% + -60px);
     background-repeat: no-repeat;
     background-size: 100% rem(1042);
     @include mq(md) {
@@ -19,7 +19,7 @@
         background-size: contain;
         position: absolute;
         content: "";
-        top: rem(215);
+        top: rem(195);
         left: 50%;
         transform: translate(-50%);
         width: 100%;
@@ -100,7 +100,6 @@
 
 .media-card__text{
     text-align: left;
-    margin-top: rem(20);
     padding: rem(20) rem(20) 0;
     color: #0B2937;
     font-size: rem(15);

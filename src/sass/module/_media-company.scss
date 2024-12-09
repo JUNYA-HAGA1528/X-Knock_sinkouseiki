@@ -1,0 +1,120 @@
+@use "global" as *;
+
+.media-company{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+.media-company__bg{
+    background-image: url('../images/common/media-company-bg-sp.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(40) 0;
+    @include mq(md) {
+        background-image: url('../images/common/media-company-bg.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+    }
+}
+
+.media-company__inner{
+    max-width: rem(843);
+    margin-inline: auto;
+}
+
+.media-company__content{
+    background: rgba(255, 255, 255, 0.9);
+    padding: rem(30) 0 rem(60);
+    @include mq(md) {
+        padding: rem(40) 0 rem(60);
+    }
+}
+
+.media-company__title{
+    color: #052E42;
+    font-size: rem(32);
+    font-weight: $semiBold;
+}
+
+.media-company__list{
+    margin-top: rem(34);
+    text-align: center;
+    @include mq(md) {
+        max-width: rem(425);
+        margin: rem(40) auto 0;
+        text-align: left;
+    }
+}
+
+.media-company__item{
+    white-space: nowrap;
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.media-company__item + .media-company__item{
+    margin-top: rem(20.27);
+    @include mq(md) {
+        margin-top: rem(25);
+    }
+}
+
+.media-company__item dt {
+    color: #006281;
+    font-size: rem(15.74);
+    font-weight: $semiBold;
+    @include mq(md) {
+        width: 30%;
+    }
+}
+
+.media-company__item dd {
+    color: #212121;
+    font-size: rem(15.74);
+    font-weight: $regular;
+    @include mq(md) {
+        width: 70%;
+    }
+}
+
+.media-company__item a {
+    text-decoration: underline;
+}
+
+.media-company__item a:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+
+
+
+
+.media-recommendation__buttons{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(80);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 rem(41);
+    }
+}
+
+.media-card__button + .media-card__button{
+    margin-top: rem(20);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
+
+.media-recommendation__buttons-sp{
+    margin-top: rem(40);
+}
