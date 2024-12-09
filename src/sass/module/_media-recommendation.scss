@@ -27,21 +27,54 @@
     }
 }
 
+.media-recommendation__container{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(60);
+    }
+}
+
+.media-recommendation__container + .media-recommendation__container{
+    margin-top: rem(40);
+}
+
 .media-recommendation__content{
     position: relative;
-    margin-top: rem(40);
     background-color: #F5FEFF;
     border: solid 1px #006281;
     border-radius: rem(1);
     padding: rem(180) rem(0) rem(60);
     @include mq(md) {
-        margin-top: rem(60);
         padding: rem(55) rem(44) rem(50) rem(34);
     }
 }
 
 .media-recommendation__content::before{
     background-image: url('../images/common/media-recommendation-series1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(17.6);
+    left: calc(50% - min(61.5%, rem(800)));
+    width: rem(255);
+    height: rem(149);
+    z-index: 1;
+    @include mq(md) {
+        top: rem(44);
+        left: calc(50% - min(56.5%, rem(800)));
+        width: rem(349);
+        height: rem(205);
+    }
+}
+
+.media-recommendation__content--position{
+    position: relative;
+}
+
+.media-recommendation__content--position::before{
+    background-image: url('../images/common/media-recommendation-series2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -95,7 +128,9 @@
     font-size: rem(14);
     font-weight: $semiBold;
     line-height: calc(26/14);
+    padding: 0 rem(18.5);
     @include mq(md) {
+        padding: 0;
         letter-spacing: 0.01em;
         
     }
@@ -124,11 +159,13 @@
     max-width: rem(717);
     margin: rem(40) auto 0;
     overflow-x: scroll;
-    width: calc(100% + rem(25));  // 右側のパディングのみ補正
+    width: calc(100% + rem(35));  // 右側のパディングのみ補正
+    padding-left: rem(20);
     @include mq(md) {
         max-width: 100%;
         width: 100%;
         margin: rem(21) auto 0;
+        padding: 0;
     }
 }
 
@@ -143,22 +180,28 @@
 
 .media-recommendation__applications{
     margin-top: rem(40);
+    padding: 0 rem(27);
     @include mq(md) {
         margin-top: rem(17);
+        padding: 0;
     }
 }
 
 .media-recommendation__subtitle{
     width: rem(267);
     height: rem(31);
-    margin-inline: auto;
+
 }
 
 .media-recommendation__applications-text{
+    padding-left: rem(9);
     font-size: rem(14);
     font-weight: $regular;
     line-height: calc(28/14);
     letter-spacing: 0.01em;
+    @include mq(md) {
+        padding: 0;
+    }
 }
 
 .media-recommendation__applications-text:first-of-type {
@@ -181,6 +224,7 @@
 .media-recommendation__feature{
     background: linear-gradient(90deg, #0080BC 0%, #010101 100%);
     margin-top: rem(20);
+    padding: rem(40) rem(9);
     @include mq(md) {
         margin-top: rem(47.61);
         padding: rem(18) rem(28.85) rem(18) rem(42.35);
@@ -204,7 +248,9 @@
 
 
 .media-recommendation__list{
+    margin-top: rem(27);
     @include mq(md){
+        margin-top: rem(0);
         width: 84.6%;
         display: flex;
         flex-wrap: wrap;
@@ -268,8 +314,12 @@
 
 }
 
+.media-recommendation__box-font dd {
+    font-size: rem(14.22);
+}
 
-.media-recommendation__buttons{
+
+.media-recommendation__buttons-pc{
     margin-top: rem(57.61);
     @include mq(md) {
         display: flex;
@@ -284,4 +334,8 @@
     @include mq(md) {
         margin-top: rem(0);
     }
+}
+
+.media-recommendation__buttons-sp{
+    margin-top: rem(40);
 }
