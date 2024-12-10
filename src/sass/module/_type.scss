@@ -109,6 +109,8 @@
     justify-content: space-between;
 }
 
+
+
 .type__item + .type__item{
     margin-top: rem(20);
     @include mq(md) {
@@ -166,4 +168,19 @@
     @include mq(md) {
         padding: rem(100) 0 rem(132);
     }
+}
+
+
+
+
+.type__wrapper {
+    position: relative; /* 必要に応じて要素を相対的に位置付け */
+}
+
+.type__arrow {
+    transition: transform 0.3s ease-in-out; /* スムーズなアニメーションを追加 */
+}
+
+.type__wrapper:hover .type__arrow {
+    transform: translateY(rem(10)); /* 矢印を下に5px移動 */
 }

@@ -444,7 +444,7 @@
     text-align: left;
     width: 100%;
     @include mq(md) {
-        width: 67.82%;
+        width: 67.34%;
     }
 }
 
@@ -476,6 +476,12 @@
     line-height: calc(32/10);
     font-weight: $regular;
     letter-spacing: 0.01em;
+}
+
+.media-recommendation__source--margin{
+    @include mq(md) {
+        margin-top: rem(32);
+    }
 }
 
 .media-recommendation-text{

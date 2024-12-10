@@ -48,4 +48,38 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
 
+
+    function scrollToElementWithOffset(elementId, offset) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset; // 要素の位置を取得
+            window.scrollTo({ 
+                top: elementPosition - offset, // オフセット分引く
+                behavior: 'smooth' // スムーズスクロール
+            });
+        }
+    }
+    
+    // イベントリスナーの共通化
+    document.querySelectorAll('.scroll-first, .scroll-second, .scroll-third, .scroll-four, .scroll-five, .scroll-six').forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault(); // デフォルトの動作を防ぐ
+    
+            // ボタンに対応するIDを取得
+            const isSp = window.innerWidth <= 768; // スマホサイズの条件
+            const baseId = button.classList.contains('scroll-first') ? 'type-pc__item-first' :
+                           button.classList.contains('scroll-second') ? 'type-pc__item-second' :
+                           button.classList.contains('scroll-third') ? 'type-pc__item-third' :
+                           button.classList.contains('scroll-four') ? 'type-pc__item-four' :
+                           button.classList.contains('scroll-five') ? 'type-pc__item-five' :
+                           button.classList.contains('scroll-six') ? 'type-pc__item-six' : null;
+    
+            if (baseId) {
+                const targetId = isSp ? `${baseId}--sp` : baseId; // デバイスに応じたIDを選択
+                scrollToElementWithOffset(targetId, 200);
+            }
+        });
+    });
+    
+    
 });

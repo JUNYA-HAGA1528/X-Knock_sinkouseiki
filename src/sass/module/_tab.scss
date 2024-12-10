@@ -1,0 +1,78 @@
+@use "global" as *;
+
+.tab{
+    position: relative;
+    text-align: center;
+    margin-top: -40px;
+    @include mq(md) {
+        margin-top: -34px;
+    }
+}
+
+.tab__inner{
+    max-width: $max-width;
+    margin-inline: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(1230);
+    }
+}
+
+.tab__content{
+    background-color: $white;
+    padding: rem(10) rem(20);
+    @include mq(md) {
+        padding: 0;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.tab__title{
+    width: 31.94%;
+}
+
+.tab__list{
+    background-color: $white;
+    @include mq(md) {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 68.05%;
+    }
+}
+
+.tab__item{
+    @include mq(md) {
+        width: 33.3%;
+    }
+}
+
+.tab__item{
+    border-bottom: solid 1px #C6C6C6;
+    padding: rem(20) 0;
+    @include mq(md) {
+        padding: 0;
+        border-bottom: none;
+        border-right: solid 1px #C6C6C6;
+    }
+}
+
+.tab__item:last-child {
+    border-bottom: none;
+    @include mq(md) {
+        border-right: none; /* 最後の要素の右線を削除 */
+    }
+}
+
+.tab__arrow{
+    width: rem(175);
+    height: rem(23);
+    margin: rem(10) auto 0;
+}
+
+.tab__item a:hover .tab__arrow {
+    transform: translateY(5px); /* 下に5px移動 */
+    transition: transform 0.3s ease; /* スムーズな移動 */
+}

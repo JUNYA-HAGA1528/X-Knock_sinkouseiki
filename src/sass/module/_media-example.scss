@@ -155,7 +155,7 @@
     @include mq(md) {
         width: 32.59%;
         margin: rem(0);
-        padding: rem(30) rem(10) rem(40) rem(12);
+        padding: rem(25) rem(10) rem(35) rem(12);
     }
 }
 
@@ -168,6 +168,7 @@
     color: #0174A9;
     font-size: rem(12);
     font-weight: $semiBold;
+    border-radius: rem(27.5);
 }
 
 .media-example__before-text{
@@ -198,6 +199,7 @@
     color: $white;
     font-size: rem(12);
     font-weight: $semiBold;
+    border-radius: rem(27.5);
 }
 
 .media-example__after-text{

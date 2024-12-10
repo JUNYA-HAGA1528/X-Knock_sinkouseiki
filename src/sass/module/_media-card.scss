@@ -19,7 +19,7 @@
         background-size: contain;
         position: absolute;
         content: "";
-        top: rem(195);
+        top: rem(180);
         left: 50%;
         transform: translate(-50%);
         width: 100%;
@@ -40,7 +40,7 @@
 .media-card__list {
     padding: rem(45) rem(18.5) 0;
     @include mq(md) {
-        padding: rem(75) 0 0;
+        padding: rem(60) 0 0;
         display: flex;
         flex-wrap: wrap;
     }
@@ -126,5 +126,16 @@
     margin-top: rem(20);
     @include mq(md) {
         margin-top: rem(0);
+    }
+}
+
+.media-card__button{
+    width: rem(302);
+    height: rem(63);
+    margin-inline: auto;
+    @include mq(md) {
+        width: rem(320);
+        height: rem(67);
+        margin: 0;
     }
 }

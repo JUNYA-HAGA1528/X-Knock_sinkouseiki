@@ -56,12 +56,12 @@
 .fv-sp__img-second{
     position: absolute;
     top: 71%;
-    left: 14%;
+    left: 22%;
 
 }
 
 .fv-sp__img-second img {
-    width: rem(200);
+    width: rem(191);
     height: rem(131);
     display: inline-block;
 }
@@ -81,7 +81,7 @@
 .fv-sp__img-third{
     position: absolute;
     top: -507%;
-    left: 38%;
+    left: 43.5%;
     z-index: 3;
 }
 
@@ -98,5 +98,31 @@
 .fv-sp__text{
     font-size: rem(15);
     font-weight: $regular;
-    line-height: calc(1.5);
+    line-height: calc(1.522);
+}
+
+
+
+.fv-sp__img-first img {
+    transition: transform 0.3s ease-in-out; /* なめらかなアニメーションを追加 */
+}
+
+.fv-sp__img-first img:hover {
+    transform: scale(1.05); /* 画像を10%拡大 */
+}
+
+.fv-sp__img-second img {
+    transition: transform 0.3s ease-in-out; /* なめらかなアニメーションを追加 */
+}
+
+.fv-sp__img-second img:hover {
+    transform: scale(1.05); /* 画像を10%拡大 */
+}
+
+.fv-sp__img-third img {
+    transition: transform 0.3s ease-in-out; /* なめらかなアニメーションを追加 */
+}
+
+.fv-sp__img-third img:hover {
+    transform: scale(1.05); /* 画像を10%拡大 */
 }
