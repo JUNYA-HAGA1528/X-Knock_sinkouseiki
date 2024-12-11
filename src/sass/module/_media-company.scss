@@ -79,8 +79,10 @@
     color: #212121;
     font-size: rem(15.74);
     font-weight: $regular;
+    margin-top: rem(9.73);
     @include mq(md) {
         width: 70%;
+        margin-top: rem(0);
     }
 }
 

@@ -8,10 +8,10 @@
 .type__bg{
     text-align: center;
     background-image: url('../images/common/type-bg-sp.webp');
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: rem(60) 0 rem(80);
+    padding: rem(60) 0 rem(100);
     @include mq(md) {
         background-image: url('../images/common/type-bg.webp');
         background-position: center;
@@ -155,8 +155,12 @@
 }
 
 .type__arrow{
-    width: rem(17);
-    height: rem(10);
+    width: rem(11);
+    height: rem(7);
+    @include mq(md) {
+        width: rem(17);
+        height: rem(10);
+    }
 }
 
 

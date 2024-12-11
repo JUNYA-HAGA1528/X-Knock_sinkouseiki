@@ -1,10 +1,18 @@
 @use "global" as *;
 
 .media{
-    background-color: $black;
+    background-image: url('../images/common/main-bg-sp.webp');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
     padding: rem(80) 0 ;
     @include mq(md) {
         padding: rem(80) 0 rem(115);
+        background-image: url('../images/common/main-bg.webp');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 100% rem(1042);
+        position: relative;
     }
 }
 

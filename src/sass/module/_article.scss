@@ -12,8 +12,10 @@
 
 .article__container{
     width: 100%;
+    background-color: $black;
     @include mq(md){
         width: 90.25%;
+
     }
 }
 

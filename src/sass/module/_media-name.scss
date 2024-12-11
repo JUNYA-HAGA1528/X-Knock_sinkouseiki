@@ -6,10 +6,17 @@
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% rem(830);
-    padding: rem(18) 0 rem(100);
+    padding: rem(16) 0 rem(100);
     @include mq(md) {
         background-image: url('../images/common/name-bg-sp.webp');
         background-size: 100% rem(1020);
+        padding: rem(42.13) 0 rem(120);
+    }
+}
+
+.media-name--padding{
+    padding: rem(8) 0 rem(100);
+    @include mq(md) {
         padding: rem(42.13) 0 rem(120);
     }
 }

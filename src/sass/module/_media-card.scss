@@ -3,7 +3,7 @@
 .media-card{
     position: relative;
     background-image: url('../images/common/media-card-bg-sp.webp');
-    background-position: center calc(50% + -60px);
+    background-position: center calc(50% + -46px);
     background-repeat: no-repeat;
     background-size: 100% rem(1042);
     @include mq(md) {
@@ -38,7 +38,7 @@
 }
 
 .media-card__list {
-    padding: rem(45) rem(18.5) 0;
+    padding: rem(75) rem(18.5) 0;
     @include mq(md) {
         padding: rem(60) 0 0;
         display: flex;
@@ -49,12 +49,14 @@
 .media-card__item {
     position: relative;
     background-color: #F5FEFF;
+    padding-top: rem(15);
     min-height: rem(384);
     border-bottom: solid 5px #0178AF;
     z-index: 1;
     @include mq(md) {
         max-width: calc(33.3333% - 1.25rem * 2 / 3);
         width: 100%;
+        padding-top: 0;
     }
 }
 
@@ -130,12 +132,10 @@
 }
 
 .media-card__button{
-    width: rem(302);
-    height: rem(63);
+    width: rem(320);
+    height: rem(67);
     margin-inline: auto;
     @include mq(md) {
-        width: rem(320);
-        height: rem(67);
         margin: 0;
     }
 }
