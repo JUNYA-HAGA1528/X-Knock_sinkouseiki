@@ -41,6 +41,9 @@
     justify-content: center;
     text-align: center;
     padding: rem(5) 0;
+    @include mq(md) {
+        padding: 0;
+    }
 }
 
 .media-example__none{

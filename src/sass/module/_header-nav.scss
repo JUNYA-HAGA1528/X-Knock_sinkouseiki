@@ -92,24 +92,4 @@
     text-decoration: none;
 }
 
-.pc-nav__item:not(.pc-nav__item--padding) a::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    width: 0;
-    height: 2px; /* 下線の高さ */
-    background-color: #5EAAD7; /* 下線の色 */
-    transition: width 0.3s ease; /* アニメーションの速さ */
-}
 
-.pc-nav__item:not(.pc-nav__item--padding) a:hover::after {
-    width: 100%; /* 下線が左から右へ伸びる */
-}
-
-/* 下線を表示しない */
-.pc-nav__item--padding a::after {
-    content: "";
-    width: 0;
-    background: none;
-}

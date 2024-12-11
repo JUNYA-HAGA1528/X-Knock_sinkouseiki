@@ -586,6 +586,7 @@
     text-align: center;
     @include mq(md) {
         padding: 0;
+        text-align: left;
     }
 }
 

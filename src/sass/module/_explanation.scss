@@ -81,7 +81,7 @@
     margin-inline: auto;
     @include mq(md) {
         width: 43.48%;
-        margin: 0;
+        margin: rem(-25) 0 0 0;
     }
 }
 
@@ -109,6 +109,7 @@
 
 .explanation__buttons{
     margin-top: rem(40);
+    text-align: center;
     @include mq(md) {
         margin-top: rem(62.95);
         display: flex;

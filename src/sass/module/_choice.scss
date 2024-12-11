@@ -110,7 +110,7 @@
     font-weight: $semiBold;
     @include mq(md) {
         font-size: rem(28);
-        padding: rem(20) 0 ;
+        padding: rem(22) 0 rem(18);
     }
 }
 
