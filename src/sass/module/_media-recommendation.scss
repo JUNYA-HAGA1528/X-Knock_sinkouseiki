@@ -583,10 +583,17 @@
     font-weight: $regular;
     line-height: calc(28/14);
     letter-spacing: 0.01em;
-    text-align: center;
+    text-align: left;
     @include mq(md) {
         padding: 0;
         text-align: left;
+    }
+}
+
+.media-recommendation__applications-text + .media-recommendation__applications-text{
+    margin-top: rem(5);
+    @include mq(md) {
+        margin-top: rem(0);
     }
 }
 
