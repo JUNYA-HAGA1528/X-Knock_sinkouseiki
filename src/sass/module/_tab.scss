@@ -31,6 +31,7 @@
 
 .tab__title{
     width: 31.94%;
+    height: 100%;
 }
 
 .tab__list{
@@ -75,4 +76,35 @@
 .tab__item a:hover .tab__arrow {
     transform: translateY(5px); /* 下に5px移動 */
     transition: transform 0.3s ease; /* スムーズな移動 */
+}
+
+
+
+
+.tab__title {
+    position: relative; /* 追加 */
+    overflow: hidden;
+    display: inline-block; /* 必要に応じて追加 */
+}
+
+// .tab__title a {
+//     position: relative; /* 追加 */
+//     display: inline-block; /* 必要に応じて追加 */
+//     z-index: 1; /* 背景エフェクトが画像より後ろに行かないように設定 */
+// }
+
+.tab__title a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%);
+    z-index: 0; /* 背景エフェクト */
+    transition: 0.5s;
+}
+
+.tab__title a:hover::before {
+    left: 100%;
 }
